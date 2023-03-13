@@ -26,6 +26,9 @@ Route::get('/new-item', function () {
 //Route::post('/addNewItem', [CatalogItem::class, 'addNewItem']);
 
 
-Route::post('/addNewItem', function(){
-    return "salut";
-});
+Route::post('/addNewItem', [CatalogItem::class, 'addNewItem']);
+
+
+
+
+Route::get('/item', [CatalogItem:: class, 'item']);

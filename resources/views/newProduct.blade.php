@@ -14,19 +14,19 @@
 
   @extends("layouts/navbar")
 
-
-  @csrf
-
-<form method="POST" action="/addNewItem" id="form">
+  
+  <form method="POST" action="/addNewItem" id="form">
+    
+      @csrf
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title item">
+      <input name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title item">
       <small id="error_title"></small>
     </div>
 
    <div class="form-group">
       <label for="price">Price</label>
-      <input type="number" class="form-control" id="price" aria-describedby="emailHelp" placeholder="Price item">
+      <input name="price" type="number" class="form-control" id="price" aria-describedby="emailHelp" placeholder="Price item">
       <small id="error_price"></small>
     </div>
 

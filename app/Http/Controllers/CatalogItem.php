@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 class CatalogItem extends Controller
 {
     public function addNewItem(Request $request){
-        $name = $request->input('name');
+        $name = $request->input('title');
         return $name;
+    }
+
+
+    public function item(){
+        return "dan2";
     }
 }
