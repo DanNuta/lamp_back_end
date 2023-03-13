@@ -15,7 +15,7 @@
   @extends("layouts/navbar")
 
   
-  <form method="POST" action="/addNewItem" id="form">
+  <form   id="form">
     
       @csrf
     <div class="form-group">
