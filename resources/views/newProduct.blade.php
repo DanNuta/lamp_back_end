@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>Document</title>
-  <meta name="_token" content="{{ csrf_token() }}">
+
 
   @vite(['resources/js/newItem.js'])
 </head>
@@ -15,7 +15,7 @@
   @extends("layouts/navbar")
 
   
-  <form   id="form">
+  <form method="POST" id="form"  enctype="multipart/form-data" action="/addNewItem">
     
       @csrf
     <div class="form-group">
@@ -31,7 +31,7 @@
     </div>
 
     <div class="custom-file">
-        <input type="file" class="custom-file-input" id="img">
+        <input name="image" type="file" class="custom-file-input" id="img">
         <label class="custom-file-label" for="img">Choose file</label>
         <small id="error_img"></small>
     </div>

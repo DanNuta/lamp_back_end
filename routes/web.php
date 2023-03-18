@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatalogItem;
+use App\Http\Controllers\CategoryGet;
+use App\Http\Controllers\ItemController;
+
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,21 +18,15 @@ use App\Http\Controllers\CatalogItem;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CategoryGet::class, 'getCategoryFromDB']);
 
 
 Route::get('/new-item', function () {
     return view('newProduct');
 });
 
-//Route::post('/addNewItem', [CatalogItem::class, 'addNewItem']);
-
 
 Route::post('/addNewItem', [CatalogItem::class, 'addNewItem']);
 
 
-
-
-Route::get('/item', [CatalogItem:: class, 'item']);
+Route::get('/itemCatalog/{id}', [ItemController::class, 'itemCatalog']);

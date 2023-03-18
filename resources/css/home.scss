@@ -1,0 +1,28 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    .title_item {
+        @include flex;
+    }
+
+    .items {
+        a {
+            text-decoration: none;
+            color: black;
+
+            .item {
+                @include flex;
+                align-items: center;
+                background-color: pink;
+                margin-bottom: 50px;
+
+                img {
+                    width: 5%;
+                }
+            }
+        }
+    }
+}

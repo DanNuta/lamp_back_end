@@ -1,0 +1,27 @@
+.input_title {
+    display: none;
+}
+
+.input_title_active {
+    display: block;
+}
+
+// ------------------------------------------------
+
+.update_item_title {
+    display: none;
+}
+
+.update_item_title_active {
+    display: block;
+}
+
+//--------------------------------------------------
+
+form {
+    background-color: red;
+
+    .title_item {
+        display: flex;
+    }
+}
