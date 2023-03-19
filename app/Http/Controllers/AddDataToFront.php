@@ -10,7 +10,10 @@ use App\Models\Catalog;
 class AddDataToFront extends Controller
 {
     public function catalog(){
-        return Catalog::all('id', 'title', 'price', 'img');
+        $data =  Catalog::all('id', 'title', 'price', 'img');
+        header('Access-Control-Allow-Origin', '*');
+
+        return json_encode($data);
     }
 
 
