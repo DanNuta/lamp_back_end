@@ -14,6 +14,7 @@
 
   @extends("layouts/navbar")
 
+
   <form 
     method="POST" 
     id="form"  

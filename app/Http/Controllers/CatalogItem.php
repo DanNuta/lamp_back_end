@@ -11,7 +11,7 @@ class CatalogItem extends Controller
 {
     public function addNewItem(Request $request){
         
-        $imagesPath = time().'-'.$request->title.'.'.$request->image->extension();
+        $imagesPath = time().'.'.$request->image->extension();
         $request->image->move(public_path("images"), $imagesPath);
 
         Catalog::create([

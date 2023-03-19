@@ -11,30 +11,24 @@
 <body>
     @extends("layouts/navbar")
 
-   <h1>List of all ctalogs</h1>
+    {{ $data }}
 
 
-    <div class="items">
-        @foreach ($data as $item)
-
+    <div>
+        @foreach ($data as $item )
         <div class="card" style="width: 18rem;">
-            <a href="/itemCatalog/{{ $item->id }}">
             <img class="card-img-top" src="{{ asset('images/'.$item->img)}}" alt="Card image cap">
-            </a>
             <div class="card-body">
               <h5 class="card-title">{{ $item->title }}</h5>
-              <span style="display: flex; gap: 5px"><h6>category</h6><a  href="category/{{ $item->id }}">{{ $item->category }}</a></span>
+              <span style="display: flex; gap: 5px"><h6>category</h6><p>{{ $item->category }}</p></span>
               <p class="card-text">$ {{ $item->price }}</p>
-              <button data-id="{{ $item->id }}" type="button" class="btn btn-danger">Delete item</button>
+              
+              <a href="/itemCatalog/{{ $item->id }}" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-                @endforeach
+        @endforeach
     </div>
-
-  
 
 
 </body>
 </html>
-
-  

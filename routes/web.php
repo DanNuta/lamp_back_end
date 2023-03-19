@@ -8,6 +8,7 @@ use App\Http\Controllers\UpdateCategoryItem;
 use App\Http\Controllers\DeleteItemCategory;
 use App\Http\Controllers\AddNewItemForm;
 use App\Http\Controllers\AddCategory;
+use App\Http\Controllers\ListCategoryController;
 
 use Illuminate\Support\Facades\DB;
 
@@ -45,3 +46,5 @@ Route::get('/addCategory', [AddCategory::class, "getFormCategory"]);
 Route::post('/addCategoryInDataBase', [AddCategory::class, "addCategoryInDataBase"]);
 
 Route::delete('/deleteCategory', [AddCategory::class, "deleteCategory"]);
+
+Route::get('/category/{item}', [ListCategoryController::class, 'listCategoty']);

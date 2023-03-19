@@ -17,9 +17,8 @@ return new class extends Migration
             $table->integer("price");
             $table->string("img");
             $table->integer('id_category');
-            $table->integer('name');
             $table->timestamps();
-            $table->dropColumn('name');
+            
         });
     }
 
@@ -28,7 +27,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('catalogs');
+        // Schema::dropIfExists('catalogs');
         
     }
 };

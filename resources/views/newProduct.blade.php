@@ -16,7 +16,11 @@
 
 
 
-  <form method="POST" id="form"  enctype="multipart/form-data" action="/addNewItem">
+  <form 
+  method="POST" 
+  id="form"  
+  enctype="multipart/form-data" 
+  action="/addNewItem">
     
       @csrf
       <div>
