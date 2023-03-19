@@ -9,6 +9,7 @@ use App\Http\Controllers\DeleteItemCategory;
 use App\Http\Controllers\AddNewItemForm;
 use App\Http\Controllers\AddCategory;
 use App\Http\Controllers\ListCategoryController;
+use App\Http\Controllers\AddDataToFront;
 
 use Illuminate\Support\Facades\DB;
 
@@ -48,3 +49,7 @@ Route::post('/addCategoryInDataBase', [AddCategory::class, "addCategoryInDataBas
 Route::delete('/deleteCategory', [AddCategory::class, "deleteCategory"]);
 
 Route::get('/category/{item}', [ListCategoryController::class, 'listCategoty']);
+
+Route::get('/catalog', [AddDataToFront::class, "catalog"]);
+Route::get('/category', [AddDataToFront::class, "category"]);
+
