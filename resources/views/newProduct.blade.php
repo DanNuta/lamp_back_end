@@ -14,10 +14,23 @@
 
   @extends("layouts/navbar")
 
-  
+
+
   <form method="POST" id="form"  enctype="multipart/form-data" action="/addNewItem">
     
       @csrf
+      <div>
+        <label for="category">Category</label>
+        <select name="category" id="category" class="form-select" aria-label="Default select example">
+
+         @foreach ( $category as $item)
+         <option value="{{ $item->id }}" selected>{{ $item->category }}</option>   
+         @endforeach
+        </select>
+      </div>
+
+
+
     <div class="form-group">
       <label for="title">Title</label>
       <input name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title item">
@@ -35,6 +48,8 @@
         <label class="custom-file-label" for="img">Choose file</label>
         <small id="error_img"></small>
     </div>
+
+    
 
     <button type="submit" class="btn btn-primary">Submit</button>
    

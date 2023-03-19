@@ -11,6 +11,8 @@ export default defineConfig({
                 "resources/css/home.scss",
                 "resources/js/itemCatalog.js",
                 "resources/css/itemCatalog.scss",
+                "resources/js/home.js",
+                "resources/js/addCategory.js",
             ],
             refresh: true,
         }),

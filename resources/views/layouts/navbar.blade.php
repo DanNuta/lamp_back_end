@@ -13,6 +13,10 @@
             <li class="nav-item">
               <a class="nav-link" href="/new-item">Add a new item</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/addCategory">Add a new category</a>
+            </li>
           </ul>
         </div>
       </nav>
