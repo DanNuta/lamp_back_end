@@ -41,13 +41,18 @@
     <h1>All category</h1>
 
 
-    <div class="category">
+    <div style="display: flex; gap: 20px; flex-wrap: wrap" class="category">
 
       @foreach ($category as $item)
-          <div class="list_category">
-            <h3>{{ $item->category }}</h3>
-            <button data-id="{{ $item->id }}" type="button" class=" delete_category_btn btn btn-danger">Delete</button>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Category</h5>
+              <h6 class="card-subtitle mb-2 text-muted"><a href="category/{{ $item->id }}">{{ $item->category }}</a></h6>
+              <button data-id="{{ $item->id }}" type="button" class=" delete_category_btn btn btn-danger">Delete</button>
+            </div>
           </div>
+
+
       @endforeach
 
 

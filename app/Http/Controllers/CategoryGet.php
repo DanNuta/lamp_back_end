@@ -18,8 +18,8 @@ class CategoryGet extends Controller
        
 
 
-        $date = DB::table("catalogs")
-        ->join("categories", 'catalogs.id_category', '=', 'categories.id')
+        $date = DB::table("categories")
+        ->join("catalogs", 'catalogs.id_category', '=', 'categories.id')
         ->get();
         ;
         

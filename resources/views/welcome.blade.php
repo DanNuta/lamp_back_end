@@ -11,10 +11,12 @@
 <body>
     @extends("layouts/navbar")
 
-   <h1>List of all ctalogs</h1>
+   
+
+   <h1>List of all catalogs</h1>
 
 
-    <div class="items">
+    <div style="display: flex; gap: 20px; flex-wrap: wrap" class="items">
         @foreach ($data as $item)
 
         <div class="card" style="width: 18rem;">
@@ -23,12 +25,12 @@
             </a>
             <div class="card-body">
               <h5 class="card-title">{{ $item->title }}</h5>
-              <span style="display: flex; gap: 5px"><h6>category</h6><a  href="category/{{ $item->id }}">{{ $item->category }}</a></span>
+              <span style="display: flex; gap: 5px"><h6>category:</h6><a  href="category/{{ $item->id_category }}">{{ $item->category }}</a></span>
               <p class="card-text">$ {{ $item->price }}</p>
               <button data-id="{{ $item->id }}" type="button" class="btn btn-danger">Delete item</button>
             </div>
-          </div>
-                @endforeach
+        </div>
+            @endforeach
     </div>
 
   

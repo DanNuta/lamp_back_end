@@ -11,10 +11,12 @@
 <body>
     @extends("layouts/navbar")
 
-    {{ $data }}
 
 
-    <div>
+    <h1>Category: {{ $data[0]->category }}</h1>
+
+
+    <div style="display: flex; gap: 20px; flex-wrap: wrap">
         @foreach ($data as $item )
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="{{ asset('images/'.$item->img)}}" alt="Card image cap">

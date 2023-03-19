@@ -14,7 +14,6 @@
 
   @extends("layouts/navbar")
 
-
   <form method="POST" action="/updateItem" enctype="multipart/form-data">
     @csrf
 

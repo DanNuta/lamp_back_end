@@ -1,5 +1,4 @@
 const deleteItem = document.querySelectorAll(".btn");
-const items = document.querySelectorAll(".item_element");
 const parentElement = document.querySelector(".items");
 
 deleteItem.forEach(element => {
@@ -18,7 +17,9 @@ deleteItem.forEach(element => {
         };
         http.send();
 
-        const targetDelete = e.target.parentElement
+        const targetDelete = e.target.parentElement.parentElement;
+       
+
 
        parentElement.removeChild(targetDelete);
     })
