@@ -18,38 +18,33 @@
 
 //--------------------------------------------------
 
-
-.add_data_in_bd_btn{
+.add_data_in_bd_btn {
     display: none;
 }
 
-
-.add_data_in_bd_btn_active{
+.add_data_in_bd_btn_active {
     display: block;
 }
 
 //-----------------------------------------------------------
 
-.update_title{
+.update_title {
     display: none;
 }
 
-
-.update_title_active{
+.update_title_active {
     display: block;
 }
 
 //---------------------------------------------------------------
 
-
-.update_price{
+.update_price {
     display: none;
 }
 
-.update_price_active{
+.update_price_active {
     display: block;
 }
-
 
 //----------------------------------------
 
@@ -61,19 +56,13 @@
     display: block;
 }
 
-
-
 form {
-
     .title_item {
         display: flex;
     }
 
-
-    .update_title_active{
-        
-
-        .btns_update_title{
+    .update_title_active {
+        .btns_update_title {
             display: flex;
         }
     }
